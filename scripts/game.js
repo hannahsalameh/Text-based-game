@@ -1,9 +1,18 @@
+//prevents form from refreshing on submit
+let form = document.getElementsByClassName("gameForm")[0];
+function handleForm(event) {
+  event.preventDefault();
+}
+form.addEventListener('submit', handleForm);
+
 function check(){
   let userInput = document.getElementById('gameInput').value;
   let textHolder = document.getElementsByClassName('gameScroll')[0];
+  //displays the user input
   let userText = document.createElement('p');
   userText.setAttribute('class','gameTextU');
   userText.textContent = "> "+ userInput;
+  //checks if what the user inputted does anything
   textHolder.appendChild(userText);
   editedInput = userInput.toLowerCase();
   if (editedInput == "help"){
@@ -16,12 +25,7 @@ function check(){
   }
 }
 
-let form = document.getElementsByClassName("gameForm")[0];
-function handleForm(event) {
-  event.preventDefault();
-}
-form.addEventListener('submit', handleForm);
-
+//adds all event text from above into p tags
 function createEvent(txt,holder){
   let text = document.createElement('p');
   text.setAttribute('class','gameTextGame');
@@ -31,7 +35,7 @@ function createEvent(txt,holder){
   typewriter.type();
 }
 
-
+//entire typewriter effect function
 function setupTypewriter(t) {
   var HTML = t.textContent;
   t.textContent = "";
@@ -41,8 +45,6 @@ function setupTypewriter(t) {
     tagOpen = false,
     typeSpeed = 100,
     tempTypeSpeed = 0;
-    //end of setting up typewriter
-
   var type = function() {
     if (HTML[cursorPosition] === " ") {
       tempTypeSpeed = 0;
