@@ -11,7 +11,7 @@ window.onload = function() {
   let textHolder = document.getElementsByClassName('gameScroll')[0];
   let firstP = "> Hello? Is anybody there?";
   createEvent(firstP,textHolder);
-  let secondP = "> My name is Russel Kirk. Im 27. I don't know where I am, but I think I'm trapped."
+  let secondP = "> My name is Russel Kirk. Im 23. I don't know where I am, but I think I'm trapped."
   setTimeout(function(){createEvent(secondP, textHolder)},3000);
   let thirdP = "> Can you help me?"
   setTimeout(function(){createEvent(thirdP, textHolder)},10000);
@@ -32,6 +32,9 @@ function check(){
   if (editedInput == "help"){
       let helpContent = "> help? help yourself!";
       createEvent(helpContent,textHolder);
+  }
+  else if(editedInput == "back"){
+    window.location.href = "../";
   }
   else{
     let confusedText = "> Sorry, I didn't get that.";
