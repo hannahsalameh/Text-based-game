@@ -5,9 +5,9 @@ function check(){
   userText.setAttribute('class','gameTextU');
   userText.textContent = "> "+ userInput;
   textHolder.appendChild(userText);
-  if (userInput == "help"){
+  editedInput = userInput.toLowerCase();
+  if (editedInput == "help"){
       let helpContent = "> help? help yourself!";
-      console.log(helpContent);
       let text = document.createElement('p');
       text.setAttribute('class','gameTextGame');
       text.textContent = helpContent;
@@ -20,22 +20,3 @@ function handleForm(event) {
   event.preventDefault();
 }
 form.addEventListener('submit', handleForm);
-
-function typeWriter(txt,element){
-  let i = 0;
-  console.log(txt);
-  if (i < txt.length){
-    element.textContent += txt.charAt(i);
-    i++;
-  }
-  setTimeout(typeWriter, 50);
-}
-// function typeWriter(helpContent,element){
-//   let i = 0;
-//   let speed = 50;
-//   if (i < helpContent.length){
-//     element.textContent += helpContent.charAt(i);
-//     i++;
-//     setTimeout(typeWriter,speed);
-//   }
-// }
