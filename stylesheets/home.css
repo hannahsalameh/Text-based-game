@@ -1,22 +1,26 @@
-.homeTitle{
-  text-align:center;
-  margin-top: 8%;
-  font-family: 'Roboto Mono', monospace;
-}
-#aboutme{
-  margin-top:4%;
+
+/*general css*/
+
+html{
+  background-color: #132743;
+  color: #407088;
 }
 form{
   text-align:center;
 }
-html{
-  background-color: #132743;
-  color: #407088;
 }
 nav{
   display:flex;
   flex-direction: column;
   justify-content: center;
+}
+
+/* home page css*/
+
+.homeTitle{
+  text-align:center;
+  margin-top: 8%;
+  font-family: 'Roboto Mono', monospace;
 }
 .nav{
   border-style: none;
@@ -30,6 +34,12 @@ nav{
 }
 .nav:hover{
   background-color: #33596c;
+}
+
+/*About me css*/
+
+#aboutme{
+  margin-top:4%;
 }
 .hannah{
   width:200px;
@@ -64,17 +74,10 @@ nav{
   padding-top: 3%;
   padding-bottom: 30%;
 }
-#linkedin{
-  width: 30px;
-  margin-right:10px;
-}
 .links:hover{
   opacity:.7;
 }
-#github{
+.links{
   width: 30px;
   margin-right:10px;
-}
-#instagram{
-  width:30px
 }
