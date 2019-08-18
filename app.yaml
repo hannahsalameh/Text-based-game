@@ -12,7 +12,8 @@ handlers:
   static_dir: scripts
 - url: /.*
   script: main.app
-
+- url: /sounds
+  static_dir: sounds
 libraries:
 - name: jinja2
   version: latest
