@@ -32,6 +32,9 @@
   padding-left: 8px;
   width:387px;
 }
+.gameInput:focus{
+  outline:none;
+}
 .gameScroll{
   width: 100%;
 }
