@@ -3,6 +3,9 @@
   margin-top: 8%;
   font-family: 'Roboto Mono', monospace;
 }
+#aboutme{
+  margin-top:4%;
+}
 form{
   text-align:center;
 }
@@ -27,4 +30,50 @@ nav{
 }
 .nav:hover{
   background-color: #33596c;
+}
+.hannah{
+  width:20%;
+  border-radius: 30%;
+  margin-right:2%;
+  margin-left: 2%;
+}
+.hannahtxt{
+  text-align:left;
+  font-family: 'Roboto Mono', monospace;
+  margin-right: 2%;
+  color: #132743;
+}
+.orderElements{
+  display:flex;
+  flex-direction: column;
+}
+.buttons{
+  display: flex;
+  flex-direction: row;
+}
+.center{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-right: 20%;
+  margin-left:20%;
+  background-color:#33596c;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 10%;
+  padding-top: 3%;
+  padding-bottom: 30%;
+}
+#linkedin{
+  width: 30px;
+  margin-right:10px;
+}
+.links:hover{
+  opacity:.7;
+}
+#github{
+  width: 30px;
+  margin-right:10px;
+}
+#instagram{
+  width:30px
 }
