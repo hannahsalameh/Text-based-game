@@ -3,8 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>A Dark Room</title>
+    <link rel="stylesheet" href="stylesheets/game.css">
+    <style media="screen">
+      html{
+        /* background-image: url("images/background.jpg");
+        background-repeat:no-repeat;
+        background-size:cover; */
+        background-color:  #33596c;
+      }
+    </style>
   </head>
   <body>
-
+    <div class="gameScreen">
+      <div class="alignBottom">
+      <div class="gameScroll">
+      </div>
+      <form class="gameForm" onsubmit="return check();">
+        <input type="text" class="gameInput" id="gameInput" autofocus="autofocus"> </input>
+      </form>
+      </div>
+    </div>
+    <script src="scripts/game.js"></script>
   </body>
 </html>

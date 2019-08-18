@@ -1,0 +1,50 @@
+.gameScreen{
+  background-color: black;
+  margin-left: auto;
+  margin-right:auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height:500px;
+  width: 400px;
+  position:relative;
+  margin-top: 50px;
+}
+.gameTextU{
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: 'Roboto Mono', monospace;
+  color: limeGreen;
+}
+.gameTextGame{
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: 'Roboto Mono', monospace;
+  color: blue;
+}
+.gameInput{
+  background-color: black;
+  border-color: #132743;
+  border-style: solid;
+  color: limeGreen;
+  font-family: 'Roboto Mono', monospace;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 8px;
+  width:387px;
+}
+.gameTextGame{
+  white-space: nowrap;
+  overflow:hidden;
+  animation: animated-text 2s steps(30,end) 1s 1 normal both;
+}
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 472px;}
+}
+.gameScroll{
+  width: 100%;
+}
+.alignBottom{
+  position:absolute;
+  bottom: 0;
+}
