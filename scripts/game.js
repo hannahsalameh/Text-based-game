@@ -5,6 +5,18 @@ function handleForm(event) {
 }
 form.addEventListener('submit', handleForm);
 
+//immediate text that happens
+window.onload = function() {
+  let userInput = document.getElementById('gameInput').value;
+  let textHolder = document.getElementsByClassName('gameScroll')[0];
+  let firstP = "> Hello? Is anybody there?";
+  createEvent(firstP,textHolder);
+  let secondP = "> My name is Russel Kirk. Im 27. I don't know where I am, but I think I'm trapped."
+  setTimeout(function(){createEvent(secondP, textHolder)},3000);
+  let thirdP = "> Can you help me?"
+  setTimeout(function(){createEvent(thirdP, textHolder)},10000);
+}
+
 function check(){
   let userInput = document.getElementById('gameInput').value;
   let textHolder = document.getElementsByClassName('gameScroll')[0];
