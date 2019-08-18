@@ -17,6 +17,7 @@ window.onload = function() {
   setTimeout(function(){createEvent(thirdP, textHolder)},10000);
 }
 
+//handles all inputted text
 function check(){
   let userInput = document.getElementById('gameInput').value;
   let textHolder = document.getElementsByClassName('gameScroll')[0];
@@ -27,12 +28,13 @@ function check(){
   //checks if what the user inputted does anything
   textHolder.appendChild(userText);
   editedInput = userInput.toLowerCase();
+  document.getElementById('gameInput').value = "";
   if (editedInput == "help"){
       let helpContent = "> help? help yourself!";
       createEvent(helpContent,textHolder);
   }
   else{
-    let confusedText = "> I didn't get that,  could you try something else?";
+    let confusedText = "> Sorry, I didn't get that.";
     createEvent(confusedText, textHolder);
   }
 }
