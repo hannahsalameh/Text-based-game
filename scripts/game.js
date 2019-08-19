@@ -49,7 +49,7 @@ function check(){
     document.getElementById('gameInput').value = "";
     if (editedInput == "hello" || editedInput == "hello!" || editedInput == "hey" || editedInput == "hello?"){
       let greeting = "> Oh thank god someone's here! can you help me out?";
-      let greeting2 = "> You have the same number as my mom used to. Thats the only number I can remember, so sorry for bothering you";
+      let greeting2 = "> You have the same number as my mom used to. Thats the only number I can remember, so I'm sorry for bothering you";
       createEvent(greeting,textHolder);
       setTimeout(function(){createEvent(greeting2,textHolder),wait = true},5000);
     }
