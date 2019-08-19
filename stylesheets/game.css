@@ -1,5 +1,8 @@
 .gameScreen{
-  background-color: black;
+  /* background-color: black; */
+  background-image: url(https://media.giphy.com/media/watL8bcdCVpcY/giphy.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
   margin-left: auto;
   margin-right:auto;
   overflow: auto;
@@ -20,8 +23,21 @@
   font-family: 'Roboto Mono', monospace;
   color: blue;
 }
+.gameTextMotion{
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: 'Roboto Mono', monospace;
+  color: 	#383838;
+}
+.gameTextEnding{
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: 'Roboto Mono', monospace;
+  color: #606060;
+  text-align: center;
+}
 .gameInput{
-  background-color: black;
+  background-color: transparent;
   border-color: #132743;
   border-style: solid;
   color: limeGreen;
