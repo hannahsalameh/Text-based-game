@@ -62,8 +62,8 @@ function check(){
       let allGameText = document.getElementsByClassName('gameTextGame');
       let i;
       let helpResponse = false;
-      for (i = 0; i < allGameText.length; i++){
-        if (allGameText[i].textContent == "> Any advice on what to do rn?"){
+      for (text of allGameText){
+        if (text.textContent == "> Any advice on what to do rn?"){
           helpResponse = true;
         }
       }
