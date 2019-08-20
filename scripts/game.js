@@ -8,7 +8,9 @@ let wait = false;
 let foundEndings = 0;
 
 //immediate text that happens
-window.onload = function() {
+window.onload = onloadText();
+
+function onloadText(){
   if (wait == false) {
     let userInput = document.getElementById('gameInput').value;
     let textHolder = document.getElementsByClassName('gameScroll')[0];
@@ -32,7 +34,6 @@ window.onload = function() {
       }},15000);
   }
 }
-
 //handles all inputted text
 function check(){
   if (wait == true){
@@ -52,7 +53,7 @@ function check(){
       createEvent(greeting,textHolder);
       setTimeout(function(){createEvent(greeting2,textHolder),wait = true},5000);
     }
-    else if (editedInput == "yes"||editedInput == "yeah" || editedInput == "yea" || editedInput == "sure" && helpResponse == false){
+    else if (editedInput == "yes"||editedInput == "yeah" || editedInput == "yea" || editedInput == "sure"){
       let yesText = "> Thank god! I was so worried you wouldn't respond";
       let yesText2 = "> Any advice on what to do rn?"
       createEvent(yesText,textHolder);
@@ -73,18 +74,22 @@ function check(){
         let noText3 ="> I guess this is goodbye :("
         let endingText = "> Type restart to start this story again or type back to go back to the title screen."
         createEvent(noText,textHolder);
-        setTimeout(function(){createEvent(noText2,textHolder),wait = true},3000);
-        setTimeout(function(){createEvent(noText3,textHolder),wait = true},7000);
-        setTimeout(function(){displayEnding(foundEndings,textHolder),wait = true},9000);
-        setTimeout(function(){createEventMotion(endingText,textHolder),wait = true},11000);
+        setTimeout(function(){createEvent(noText2,textHolder)},3000);
+        setTimeout(function(){createEvent(noText3,textHolder)},7000);
+        setTimeout(function(){displayEnding(foundEndings,textHolder)},10000);
+        setTimeout(function(){createEventMotion(endingText,textHolder)},11000);
       }
       else{
-        let noTextAlt = "too late! you already agreed!"
+        let noTextAlt = "> too late! you already agreed!"
         createEvent(noTextAlt,textHolder);
       }
     }
+    else if(editedInput == "look around" || editedInput == "look"){
+      let text = "> I can't see anything! The room is literally pitch black";
+      createEvent(text,textHolder);
+    }
     else if(editedInput == "help"){
-        let helpContent = "> help? help yourself!";
+        let helpContent = "> Help? Um, I'm not sure what I can do, but good luck I guess!";
         createEvent(helpContent,textHolder);
     }
     else if(editedInput == "back"){
@@ -92,8 +97,17 @@ function check(){
       //this is essentially the back button lol
     }
     else if(editedInput == "restart"){
-      // reset();
-      //make this do something
+      textHolder.innerHTML = "";
+      wait = false;
+      onloadText();
+      //restarts the game, but shouldn't restart the ending counter (still might tho)
+    }
+    else if(editedInput == "how are you?"|| editedInput == "how are you"){
+      let flavor = "> I'm good!";
+      let flavor2 = "> Well, actually I'm not, but I guess I'm fine for the circumstances";
+      createEvent(flavor,textHolder);
+      setTimeout(function(){createEvent(flavor2,textHolder)},2000);
+      // just some flavor text to get to know carol better
     }
     else{
       let confusedText = "> Sorry, I didn't get that.";
