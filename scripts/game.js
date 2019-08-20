@@ -40,7 +40,6 @@ function check(){
     let textHolder = document.getElementsByClassName('gameScroll')[0];
     //displays the user input
     let userText = document.createElement('p');
-    let helpResponse = false;
     userText.setAttribute('class','gameTextU');
     userText.textContent = "> "+ userInput;
     //checks if what the user inputted does anything
@@ -56,11 +55,18 @@ function check(){
     else if (editedInput == "yes"||editedInput == "yeah" || editedInput == "yea" || editedInput == "sure" && helpResponse == false){
       let yesText = "> Thank god! I was so worried you wouldn't respond";
       let yesText2 = "> Any advice on what to do rn?"
-      helpResponse = true;
       createEvent(yesText,textHolder);
       setTimeout(function(){createEvent(yesText2,textHolder),wait = true},4000);
     }
     else if (editedInput == "no"|| editedInput == "nah" || editedInput == "nope"){
+      let allGameText = document.getElementsByClassName('gameTextGame');
+      let i;
+      let helpResponse = false;
+      for (i = 0; i < allGameText.length; i++){
+        if (allGameText[i].textContent == "> Any advice on what to do rn?"){
+          helpResponse = true;
+        }
+      }
       if (helpResponse == false){
         let noText = "> No? Really? Ok..."
         let noText2 = "> I guess you have more important things to do..."
@@ -71,6 +77,10 @@ function check(){
         setTimeout(function(){createEvent(noText3,textHolder),wait = true},7000);
         setTimeout(function(){displayEnding(foundEndings,textHolder),wait = true},9000);
         setTimeout(function(){createEventMotion(endingText,textHolder),wait = true},11000);
+      }
+      else{
+        let noTextAlt = "too late! you already agreed!"
+        createEvent(noTextAlt,textHolder);
       }
     }
     else if(editedInput == "help"){
