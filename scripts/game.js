@@ -110,6 +110,7 @@ function check(){
       userText.setAttribute('class','gameTextU');
       userText.textContent = "> "+ userInput;
       textHolder.appendChild(userText);
+      document.getElementById('gameInput').value = "";
       wait = true;
     }
     else{
