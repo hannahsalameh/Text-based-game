@@ -20,7 +20,7 @@ function onloadText(){
       if (wait ==false){
         let secondP = "> My name is Carol Davis. Im 23. I don't know where I am or how I got here, but I think I've been kidnapped."
         createEvent(secondP, textHolder);
-      }},3000);
+      }},4500);
     setTimeout(function(){
       if (wait==false){
         let thirdP = "> I'm so scared, its so dark..."
@@ -178,7 +178,7 @@ function setupTypewriter(t) {
     if (HTML[cursorPosition] === " ") {
       tempTypeSpeed = 0;
     } else {
-      tempTypeSpeed = Math.random() * typeSpeed + 50;
+      tempTypeSpeed = 50 + 50;
     }
     t.innerHTML += HTML[cursorPosition];
     cursorPosition += 1;
